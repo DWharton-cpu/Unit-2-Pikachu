@@ -1,0 +1,272 @@
+ /* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Staatliches', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3,
+h4 {
+	margin-top: 0;
+}
+
+h4 {
+	margin-bottom: .4em;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+	line-height: 0;
+  position: relative;
+}
+
+figcaption {
+	font-size: .9em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 1em;	
+	background: rgba(19,43,102, .85);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* position, bottom, width and position relative give the caption a snug fit at the bottom of the image, as wide as the figure parent container 
+  
+  
+  to change the position to the top with a snug fit, use top: 0; instead of bottom: 0;*/
+}
+
+h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.main-nav {
+	margin-top: 5px;
+}
+
+	.name a,
+	.main-nav a {
+		display: block;
+		text-align: center;
+		padding: 10px 15px;
+  
+	}
+	
+	.main-nav a {
+		font-size: .95em;
+		color: #000;
+		text-transform: uppercase;
+	}
+
+	.main-nav a:hover {
+		color: #000;
+	}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.banner,
+.main-footer {
+	text-align: center;
+}
+
+.banner {
+	color: #fff;
+	background: #000;
+	padding: 3.2em 0;
+	margin-bottom: 60px;
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 190px;
+}
+
+.headline {
+	margin-bottom: 0;
+}
+
+.icon-location {
+  width: 35px;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+}
+
+/*changing position of location icon on primary content. The top bottom left right declarations push or pull from the parent container width / height for their placementn*/
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 320px) {
+	
+body {
+  padding-top: 68px;
+}
+
+/* Fixed Navigation bar */
+
+
+.main-header {
+  position:fixed;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba (0,0,0,.4);
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+
+@media (min-width: 769px) {
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.name,
+	.col {
+		float: left;
+	}
+
+	.primary,
+	.secondary {
+		width: 50%;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		display: inline-block;
+    float: left;
+		margin-left: 15px;
+	}
+
+.main-bottom li {
+		display: inline-block;
+    float: left;
+		margin-left: 15px;
+    padding: 2em 0;
+	  margin-top: 30px;
+    padding-bottom: 35px;
+}
+	}
+
+	.tagline {
+		font-size: 1.4em;
+	}
+
+  
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@media (min-width: 1025px) {
+	
+body {
+  padding-top: 68px;
+}
+
+/* Fixed Navigation bar */
+
+
+.main-header {
+  position:fixed;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba (0,0,0,.4);
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+/* ^^ be sure to add 100% width for fixed navigation. the position, background and box shadowing help it to stand out, but it needs to fit the browser window 
+
+
+then, top: 0; anchors the header to the top of the browser window
+
+AND z index allows positioned elements such as the navigation to be above any conflicting elements. z index places things on top or bottom of eachother. The higher z index value will be above those with lower z index values. the position declaration has a default value of 0 for z-index. making the z index 1 places the main header elements above other elements on the page */
+
+
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+
+	.primary {
+		width: 40%;
+	}
+
+	.secondary,
+	.tertiary {
+		width: 30%;
+	}
+
+.main-footer {
+	padding: 2em 0;
+	margin-top: 30px;
+  padding-bottom: 35px;
+}
+
+
